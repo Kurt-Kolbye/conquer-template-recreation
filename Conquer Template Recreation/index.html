@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kolbye, Kurt">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conquer Template Recreation by Kurt Kolbye</title>
+    <script src="https://kit.fontawesome.com/d21461a88c.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <!-- Small devices -->
+            <!-- TODO: Fix clicking button (not the anchor tag) doesn't scroll -->
+            <div id="nav-toggle" type="button" class="nav-collapse" onclick="toggleNavMenu()"><span class="fas fa-bars"></span></div>
+            <ul id="nav-items" class="nav-items">
+                <li onclick="scrollToSection(this)" id="nav-home" class="nav-section-active"><a href="#home-section">Homepage</a></li>
+                <li onclick="scrollToSection(this)" id="nav-about"><a href="#">About Us</a></li>
+                <li onclick="scrollToSection(this)" id="nav-services"><a href="#">Services</a></li>
+                <li onclick="scrollToSection(this)" id="nav-contact"><a href="#">Contact</a></li>
+                <li onclick="scrollToSection(this)"><a href="https://www.google.com/" target="_blank">External</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home-section">
+        <div class="home-content parallax">
+            <h1 class="title">CONQUER</h1>
+            <h4 class="sub-title">Recreated Conquer Template</h4>
+        </div>
+    </section>
+
+    <section id="about-section">
+        <div class="about-content container">
+            <!-- Row 1 -->
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-s-4">
+                    <div class="feature-content">
+                        <img src="img/ftr-1.jpg" alt="feature 1 image">
+                        <h2 class="feature-content-title text-green">Bootstrap v3.3.6</h2>
+                        <p class="feature-content-description">
+                            Morbi sagittis justo a velit placerat ullamcorper quis quis velit. 
+                            Sed convallis at risus ullamcorper auctor. 
+                            Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. 
+                            Duis lectus magna, ornare ac scelerisque.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="feature-content-link btn-green">
+                            Green Button
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-s-4">
+                    <div class="feature-content">
+                        <img src="img/ftr-2.jpg" alt="feature 2 image">
+                        <h2 class="feature-content-title text-blue">Responsive Design</h2>
+                        <p class="feature-content-description">
+                            Conquer Template is provided by TemplateMo for free of charge. 
+                            You can use this template for any kind of website. 
+                            No credit link is required. All images by Unsplash. 
+                            Thank you for visiting our website. Please come again!
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="feature-content-link btn-blue">
+                            See Details
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 3 -->
+                <div class="col-s-4">
+                    <div class="feature-content">
+                        <img src="img/ftr-3.jpg" alt="feature 3 image">
+                        <h2 class="feature-content-title text-red">Parallax Layout</h2>
+                        <p class="feature-content-description">
+                            Morbi sagittis justo a velit placerat ullamcorper quis quis velit. 
+                            Sed convallis at risus ullamcorper auctor. 
+                            Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. 
+                            Duis lectus magna, ornare ac scelerisque.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="feature-content-link btn-red">
+                            Red Button
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-s-6">
+                    <div class="blog-content">
+                        <img src="img/blog-1.jpg" alt="blog 1 image">
+                        <h2 class="text-grey">Two Column Left Side</h2>
+                        <p class="blog-content-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nam tempor eros eget eros maximus, ut cursus sem euismod. 
+                            Donec iaculis tristique odio at consectetur. 
+                            Nullam dignissim varius suscipit. 
+                            Sed in leo sit amet velit finibus pretium.
+                            <br/>
+                            <br/>
+                            Vestibulum vel mauris at erat mattis accumsan et ac lorem. 
+                            Cras non venenatis orci, sed tincidunt massa. 
+                            Duis nisl lectus, auctor eu sodales at, dignissim eu orci. 
+                            Sed vitae venenatis magna, in blandit metus.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="blog-content-link btn-white">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="col-s-6">
+                    <div class="blog-content">
+                        <img src="img/blog-2.jpg" alt="blog 2 image">
+                        <h2 class="text-grey">Two Column Right Side</h2>
+                        <p class="blog-content-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nam tempor eros eget eros maximus, ut cursus sem euismod. 
+                            Donec iaculis tristique odio at consectetur. 
+                            Nullam dignissim varius suscipit. 
+                            Sed in leo sit amet velit finibus pretium.
+                            <br/>
+                            <br/>
+                            Vestibulum vel mauris at erat mattis accumsan et ac lorem. 
+                            Cras non venenatis orci, sed tincidunt massa. 
+                            Duis nisl lectus, auctor eu sodales at, dignissim eu orci. 
+                            Sed vitae venenatis magna, in blandit metus.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="blog-content-link btn-white">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services-section">
+        <div class="services-content parallax">
+            <div class="service">
+                <h1 class="title">Our Services</h1>
+                <p class="services-content-description">
+                    Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id
+                    felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.
+                    Etiam a mi quis arcu varius condimentum.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Row 1 -->
+            <div class="row text-center">
+                <div class="col-3 col-s-6">
+                    <div class="blog-content">
+                        <img src="img/service-1.jpg" alt="service 1 image">
+                        <h2 class="text-grey">Column One</h2>
+                        <p class="blog-content-description">
+                            Ut ac odio scelerisque ante ornare commodo. 
+                            Sed faucibus dui libero, in tincidunt purus pretium quis. 
+                            Fusce posuere egestas enim eu viverra.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 col-s-6">
+                    <div class="blog-content">
+                        <img src="img/service-2.jpg" alt="service 2 image">
+                        <h2 class="text-grey">Column Two</h2>
+                        <p class="blog-content-description">
+                            Ut ac odio scelerisque ante ornare commodo. 
+                            Sed faucibus dui libero, in tincidunt purus pretium quis.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="services-content-link btn-white">
+                            Read It
+                        </a>
+                    </div>
+                </div>
+                <div class="col-3 col-s-6">
+                    <div class="blog-content">
+                        <img src="img/service-3.jpg" alt="service 3 image">
+                        <h2 class="text-grey">Column Three</h2>
+                        <p class="blog-content-description">
+                            Ut ac odio scelerisque ante ornare commodo. 
+                            Sed faucibus dui libero, in tincidunt purus pretium quis. 
+                            Fusce posuere egestas enim eu viverra.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3 col-s-6">
+                    <div class="blog-content">
+                        <img src="img/service-4.jpg" alt="service 4 image">
+                        <h2 class="text-grey">Column Four</h2>
+                        <p class="blog-content-description">
+                            Ut ac odio scelerisque ante ornare commodo. 
+                            Sed faucibus dui libero, in tincidunt purus pretium quis.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="services-content-link btn-white">
+                            Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-content">
+                        <img src="img/service-5.jpg" alt="big service 5 image">
+                        <h2 class="text-grey pad-left-20">One Big Column</h2>
+                        <p class="blog-content-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nam tempor eros eget eros maximus, ut cursus sem euismod. 
+                            Donec iaculis tristique odio at consectetur. 
+                            Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium. 
+                            Vivamus dictum nisi ac fermentum interdum. 
+                            Vestibulum vel mauris at erat mattis accumsan et ac lorem. 
+                            Cras non venenatis orci, sed tincidunt massa. 
+                            Duis nisl lectus, auctor eu sodales at, dignissim eu orci. 
+                            Sed vitae venenatis magna, in blandit metus. 
+                            Praesent volutpat cursus rhoncus. 
+                            Aenean arcu diam, suscipit ac neque in, sollicitudin convallis orci.
+                            <br/>
+                            <br/>
+                            Fusce eu porta massa, sed tincidunt turpis. 
+                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                            Vivamus a urna tellus. Integer pharetra vitae nisi et lacinia. 
+                            Morbi sagittis justo a velit placerat ullamcorper quis quis velit. 
+                            Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. 
+                            Quisque semper porta nisi vitae suscipit. 
+                            Duis lectus magna, ornare ac scelerisque quis, maximus eget nisi.
+                        </p>
+                        <a href="https://www.free-css.com/free-css-templates" class="services-content-link btn-white mar-left-20">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <div class="contact-content parallax">
+            <div class="container">
+                <h1 class="title">Contact Form</h1>
+                <div class="row">
+                    <div class="col-s-12">
+                        <p class="contact-content-description">
+                            Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. 
+                            Sed id felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia.
+                            Etiam a mi quis arcu varius condimentum.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form action="#" method="post">
+                            <div class="col-s-6">
+                                <!-- TODO: Add left form elements -->
+                            </div>
+                            <div class="col-s-6">
+                                <!-- TODO: Add right form elements -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <!-- TODO: Add footer information including a sign-off -->
+    </footer>
+</body>
+</html>
