@@ -1,14 +1,8 @@
-/* :root {
-    --headerHeight: 64px;
-    var(--headerHeight);
-} */
-
 /* Rows */
 .row::after {
     content: "";
     clear: both;
     display: flex;
-    height: var(--height);
 }
 
 /* Columns */
@@ -72,8 +66,6 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    min-height: 60px;
-    height: 60px;
 }
 
 /* Desktop > 768px */

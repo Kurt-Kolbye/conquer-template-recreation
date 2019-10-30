@@ -47,8 +47,8 @@ function toggleActiveSectionNav(activeSection) {
 function elementIsVisible(element) {
     // Get the top and bottom of the window and element
     // Subtract header from calculations
-    var headerOffset = $('.header').height();
-    var windowTop = $(window).scrollTop() - headerOffset;
+    var headerOffset = 60;
+    var windowTop = $(window).scrollTop() + headerOffset;
     var windowBottom = windowTop + $(window).height();
     var elementTop = $(element).offset().top;
     var elementBottom = elementTop + $(element).height();
@@ -66,28 +66,29 @@ function elementIsVisible(element) {
 // Scroll to section based on what nav item was used
 function scrollToSection(element) {
     var section;
-
-    // TODO: Add margin or height to compensate for header
+    var headerOffset = 60;
+    // var headerOffset = $('.header').offset().top;
+    
+    // TODO: Adjust headerOffset somehow for mobiles
+    // IDEA: Adjust mobile header height to 75px,
+    // on nav-toggle click change header height to
+    // compensate for dropdown items
     switch (element.id) {
         case 'nav-home':
-            section = document.getElementById('home-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();           
+            section = $('#home-section');
+            $(window).scrollTop(section.offset().top - headerOffset);
             break;
         case 'nav-about':
-            section = document.getElementById('about-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();
+            section = $('#about-section');
+            $(window).scrollTop(section.offset().top - headerOffset);
             break;
         case 'nav-services':
-            section = document.getElementById('services-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();
+            section = $('#services-section');
+            $(window).scrollTop(section.offset().top - headerOffset);
             break;
         case 'nav-contact':
-            section = document.getElementById('contact-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();
+            section = $('#contact-section');
+            $(window).scrollTop(section.offset().top - headerOffset);
             break;
         default:
             break;
