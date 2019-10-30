@@ -1,0 +1,401 @@
+/* Rows */
+.row::after {
+    content: "";
+    clear: both;
+    display: flex;
+}
+
+/* Columns */
+/* Phones < 600px */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+/* Tablets 600px - 767px */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+/* Desktop > 768px */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Desktop > 1200px */
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.header {
+    background-color: #383E4C;
+    border-color: #080808;
+    padding: 20px 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/* Desktop > 768px */
+@media screen and (min-width: 768px) {
+    .header {
+        text-align: center;
+    }
+}
+
+.home-content {
+    text-align: center;
+    background-image: url(../img/bg-1.jpg);
+    height: 613px;
+}
+
+.home-content .title {
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000000;
+    margin: 0;
+    padding-top: 200px;
+}
+
+.home-content .sub-title {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-shadow: 1px 1px #333333;
+    margin: 10px 0px;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.feature-content {
+    background: #F2F2F2;
+    padding-bottom: 40px;
+}
+
+.feature-content-title {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.feature-content-description {
+    text-align: left;
+    color: #333333;
+    padding: 0 20px 35px;
+}
+
+.feature-content-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.blog-content {
+    background: #F2F2F2;
+    padding-bottom: 25px;
+}
+
+/* TODO: Duplicates feature-content-description. Also used in services. Refactor */
+.blog-content-description {
+    text-align: left;
+    color: #333333;
+    padding: 0 20px 35px;;
+}
+
+.blog-content-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    color: #666666;
+    font-size: 18px;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 50.00%;
+}
+
+.services-content {
+    text-align: center;
+    background-image: url(../img/bg-2.jpg);
+    height: 316px;
+}
+
+.service {
+    margin: 0 5%;
+    padding-top: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    .service {
+        padding-top: 75px;
+        margin: 0 15%;
+    }
+}
+
+.services-content .title {
+    color: #ffffff;
+    font-size: 36px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px #aaaaaa;
+    margin: 0 0 20px 0;
+}
+
+.services-content .services-content-description {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.services-content-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    color: #666666;
+    font-size: 18px;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.contact-content {
+    height: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-image: url(../img/bg-3.jpg);
+    text-align: center;
+}
+
+.contact-content .container {
+    max-width: 750px;
+}
+
+.contact-content .title {
+    color: #ffffff;
+    font-size: 36px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px #aaaaaa;
+    margin: 0 0 20px 0;
+}
+
+.contact-content-description {
+    background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border: none;
+    background: rgba(242, 242, 242, 0.4);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    color: #000000;
+    -webkit-transition: border-color ease-in-out .15s,
+                        box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,
+                        box-shadow ease-in-out .15s;
+}
+/* TODO: Add extra CSS for the right form elements */
+
+.pad-left-20 {
+    padding-left: 20px;
+}
+.mar-left-20 {
+    margin-left: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-green {
+    color: #178A27;
+}
+
+.text-blue {
+    color: #1686C1;
+}
+
+.text-red {
+    color: #852406;
+}
+
+.text-grey {
+    color: #666666;
+}
+
+.btn-green {
+    color: #ffffff;
+    background: #178A27
+}
+
+.btn-green:hover {
+    background: #449D44;
+}
+
+.btn-blue {
+    color: #ffffff;
+    background: #1686C1;
+}
+
+.btn-blue:hover {
+    background: #31B0D5;
+}
+
+.btn-red {
+    color: #ffffff;
+    background: #852406;
+}
+
+.btn-red:hover {
+    background: #C9302C;
+}
+
+.btn-white {
+    background: #ffffff;
+}
+
+.btn-white:hover {
+    background: #E6E6E6E6;
+}
+
+/* Parallax effect classes */
+.parallax {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Enable parallax effect for larger screen sizes */
+@media only screen and (min-width: 768px){
+    .parallax {
+        background-attachment: fixed;
+    }
+}
+
+/* END PARALLAX CLASSES */
+
+
+/* Navbar classes */
+.nav-collapse {
+    position: sticky;
+    padding: 0 15px 0 15px;
+    font-size: 20pt;
+    color: #ffffff;
+}
+
+.nav-collapse:hover {
+    cursor: pointer;
+}
+
+.nav-items {
+    display: none;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    padding: 10px;
+    border: 1px solid #646d7c;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav li:hover {
+    background-color: #49505F;
+    cursor: pointer;
+}
+
+.nav .nav-section-active {
+    background-color: #49505F;
+}
+
+.nav li a.nav-active {
+    color: #00adb5;
+}
+
+/* Desktop > 768px */
+@media screen and (min-width: 768px) {
+    .nav-collapse {
+        display: none;
+    }
+    .nav {
+        display: inline;
+        text-align: center;
+    }
+    .nav ul {
+        display: inline;
+        text-align: center;
+    }
+    .nav li {
+        display: inline;
+    }
+    .nav-items {
+        display: inline;
+    }
+}
+
+/* END NAVBAR CLASSES */
