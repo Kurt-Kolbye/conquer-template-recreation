@@ -47,8 +47,8 @@ function toggleActiveSectionNav(activeSection) {
 function elementIsVisible(element) {
     // Get the top and bottom of the window and element
     // Subtract header from calculations
-    var headerOffset = $('.header').height();
-    var windowTop = $(window).scrollTop() - headerOffset;
+    var headerOffset = 60;
+    var windowTop = $(window).scrollTop() + headerOffset;
     var windowBottom = windowTop + $(window).height();
     var elementTop = $(element).offset().top;
     var elementBottom = elementTop + $(element).height();
@@ -65,33 +65,41 @@ function elementIsVisible(element) {
 
 // Scroll to section based on what nav item was used
 function scrollToSection(element) {
-    var section;
-
-    // TODO: Add margin or height to compensate for header
-    switch (element.id) {
-        case 'nav-home':
-            section = document.getElementById('home-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();           
-            break;
-        case 'nav-about':
-            section = document.getElementById('about-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();
-            break;
-        case 'nav-services':
-            section = document.getElementById('services-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();
-            break;
-        case 'nav-contact':
-            section = document.getElementById('contact-section');
-            section.style.height += $('.header').height();
-            section.scrollIntoView();
-            break;
-        default:
-            break;
+    // If the user is on mobile, this will close the Nav Menu
+    
+    // TODO: Add a check for if the nav-toggle is displayed and
+    // if not, don't call toggleNavMenu() or setTimeout() function 
+    // so it doesn't "flash" on desktop
+    toggleNavMenu();
+    // If on mobile, wait before the slideUp() call is completed to scroll the user
+    setTimeout(scroll, 400);
+    function scroll() {
+        var section;
+        var headerClass = '.header';
+        var headerOffset = document.querySelector(headerClass).clientHeight;
+        
+        switch (element.id) {
+            case 'nav-home':
+                section = $('#home-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            case 'nav-about':
+                section = $('#about-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            case 'nav-services':
+                section = $('#services-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            case 'nav-contact':
+                section = $('#contact-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            default:
+                break;
+        }
     }
+    
 }
 
 // Toggles the navigation buttons for mobile
