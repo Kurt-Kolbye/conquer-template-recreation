@@ -65,34 +65,41 @@ function elementIsVisible(element) {
 
 // Scroll to section based on what nav item was used
 function scrollToSection(element) {
-    var section;
-    var headerOffset = 60;
-    // var headerOffset = $('.header').offset().top;
+    // If the user is on mobile, this will close the Nav Menu
     
-    // TODO: Adjust headerOffset somehow for mobiles
-    // IDEA: Adjust mobile header height to 75px,
-    // on nav-toggle click change header height to
-    // compensate for dropdown items
-    switch (element.id) {
-        case 'nav-home':
-            section = $('#home-section');
-            $(window).scrollTop(section.offset().top - headerOffset);
-            break;
-        case 'nav-about':
-            section = $('#about-section');
-            $(window).scrollTop(section.offset().top - headerOffset);
-            break;
-        case 'nav-services':
-            section = $('#services-section');
-            $(window).scrollTop(section.offset().top - headerOffset);
-            break;
-        case 'nav-contact':
-            section = $('#contact-section');
-            $(window).scrollTop(section.offset().top - headerOffset);
-            break;
-        default:
-            break;
+    // TODO: Add a check for if the nav-toggle is displayed and
+    // if not, don't call toggleNavMenu() or setTimeout() function 
+    // so it doesn't "flash" on desktop
+    toggleNavMenu();
+    // If on mobile, wait before the slideUp() call is completed to scroll the user
+    setTimeout(scroll, 400);
+    function scroll() {
+        var section;
+        var headerClass = '.header';
+        var headerOffset = document.querySelector(headerClass).clientHeight;
+        
+        switch (element.id) {
+            case 'nav-home':
+                section = $('#home-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            case 'nav-about':
+                section = $('#about-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            case 'nav-services':
+                section = $('#services-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            case 'nav-contact':
+                section = $('#contact-section');
+                $(window).scrollTop(section.offset().top - headerOffset);
+                break;
+            default:
+                break;
+        }
     }
+    
 }
 
 // Toggles the navigation buttons for mobile
