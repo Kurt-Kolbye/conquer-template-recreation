@@ -15,6 +15,26 @@ function findActiveSection() {
     }
 }
 
+// Determines if the element is visible on the screen
+function elementIsVisible(element) {
+    // Get the top and bottom of the window and element
+    // Subtract header from calculations
+    var headerOffset = document.querySelector('.header').clientHeight;
+    var windowTop = $(window).scrollTop() + headerOffset;
+    var windowBottom = windowTop + $(window).height();
+    var elementTop = $(element).offset().top;
+    var elementBottom = elementTop + $(element).height();
+
+    if(elementTop < windowBottom && elementBottom > windowTop) {
+        // Element is visible
+        return true;
+    }
+    else {
+        // Element is not visible
+        return false;
+    }
+}
+
 // Toggles the active section's related nav item
 function toggleActiveSectionNav(activeSection) {
     var navItems = $('#nav-items li');
@@ -43,41 +63,25 @@ function toggleActiveSectionNav(activeSection) {
     }
 }
 
-// Determines if the element is visible on the screen
-function elementIsVisible(element) {
-    // Get the top and bottom of the window and element
-    // Subtract header from calculations
-    var headerOffset = 60;
-    var windowTop = $(window).scrollTop() + headerOffset;
-    var windowBottom = windowTop + $(window).height();
-    var elementTop = $(element).offset().top;
-    var elementBottom = elementTop + $(element).height();
-
-    if(elementTop < windowBottom && elementBottom > windowTop) {
-        // Element is visible
-        return true;
-    }
-    else {
-        // Element is not visible
-        return false;
-    }
-}
-
 // Scroll to section based on what nav item was used
 function scrollToSection(element) {
-    // If the user is on mobile, this will close the Nav Menu
+    if ($('#nav-toggle').is(':visible')) {
+        // If the user is on mobile, this will close the Nav Menu
+        toggleNavMenu();
+        // Wait for the toggleNavMenu() call to complete before scrolling
+        setTimeout(scroll, 400);
+    }
+    else {
+        // Scroll like normal
+        scroll();
+    }
     
-    // TODO: Add a check for if the nav-toggle is displayed and
-    // if not, don't call toggleNavMenu() or setTimeout() function 
-    // so it doesn't "flash" on desktop
-    toggleNavMenu();
-    // If on mobile, wait before the slideUp() call is completed to scroll the user
-    setTimeout(scroll, 400);
+    // Scroll to the section
     function scroll() {
         var section;
-        var headerClass = '.header';
-        var headerOffset = document.querySelector(headerClass).clientHeight;
-        
+        // Subtracted  -1 in this check to offset an odd 1 pixel difference on desktops
+        var headerOffset = document.querySelector('.header').clientHeight - 1;
+        console.log(headerOffset);
         switch (element.id) {
             case 'nav-home':
                 section = $('#home-section');
