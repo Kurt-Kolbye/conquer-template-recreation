@@ -257,11 +257,18 @@
                 <div class="row">
                     <div class="col-12">
                         <form action="#" method="post">
-                            <div class="col-s-6">
-                                <!-- TODO: Add left form elements -->
+                            <div class="col-s-6 contact-form-left">
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control" placeholder="Name">
+                                    <input name="email" type="email" class="form-control" placeholder="Email">
+                                    <input name="subject" type="text" class="form-control" placeholder="Subject">
+                                </div>
                             </div>
-                            <div class="col-s-6">
-                                <!-- TODO: Add right form elements -->
+                            <div class="col-s-6 contact-form-right">
+                                <div class="form-group">
+                                    <textarea name="message" rows="6" class="form-control form-text-area" placeholder="Your message here..."></textarea>
+                                    <button type="submit" class="form-btn" disabled>Send</button> 
+                                </div>
                             </div>
                         </form>
                     </div>
