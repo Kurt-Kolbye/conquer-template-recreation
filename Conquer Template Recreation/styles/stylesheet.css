@@ -224,8 +224,17 @@
     border-radius: 5px;
     color: #000000;
     font-size: 16px;
-    margin-bottom: 20px;
     padding: 20px 15px;
+}
+
+/* TODO: Add media query that makes contact-form-left and
+   contact-form-right set the other side padding to 0 for mobiles */
+.contact-form-left {
+    padding-left: 0;
+}
+
+.contact-form-right {
+    padding-right: 0;
 }
 
 .form-group {
@@ -250,7 +259,45 @@
     transition: border-color ease-in-out .15s,
                         box-shadow ease-in-out .15s;
 }
-/* TODO: Add extra CSS for the right form elements */
+
+.form-control.form-text-area {
+    height: auto;
+    resize: none;
+}
+
+/* Apply placeholder styling to the form-control inputs */
+.form-control::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+    0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+    0 0 8px rgba(102,175,233,.6);
+}
+
+.form-btn {
+    float: left;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #262628;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.form-btn:hover {
+    color: #333333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
 
 .pad-left-20 {
     padding-left: 20px;
