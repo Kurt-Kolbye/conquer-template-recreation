@@ -227,14 +227,27 @@
     padding: 20px 15px;
 }
 
-/* TODO: Add media query that makes contact-form-left and
-   contact-form-right set the other side padding to 0 for mobiles */
+/* TODO: Make the padding bottom and top look good on mobile*/
 .contact-form-left {
     padding-left: 0;
+    padding-right: 0;
 }
 
 .contact-form-right {
+    padding-left: 0;
     padding-right: 0;
+}
+
+@media screen and (min-width: 600px) {
+    .contact-form-left {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    
+    .contact-form-right {
+        padding-left: 15px;
+        padding-right: 0;
+    }
 }
 
 .form-group {
