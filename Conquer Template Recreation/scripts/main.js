@@ -81,7 +81,6 @@ function scrollToSection(element) {
         var section;
         // Subtracted  -1 in this check to offset an odd 1 pixel difference on desktops
         var headerOffset = document.querySelector('.header').clientHeight - 1;
-        console.log(headerOffset);
         switch (element.id) {
             case 'nav-home':
                 section = $('#home-section');

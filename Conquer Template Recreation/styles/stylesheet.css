@@ -227,31 +227,30 @@
     padding: 20px 15px;
 }
 
-/* TODO: Make the padding bottom and top look good on mobile*/
 .contact-form-left {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
 }
 
 .contact-form-right {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
 }
 
 @media screen and (min-width: 600px) {
     .contact-form-left {
         padding-left: 0;
         padding-right: 15px;
+        padding-bottom: 15px;
     }
     
     .contact-form-right {
         padding-left: 15px;
         padding-right: 0;
+        padding-top: 15px;
     }
-}
-
-.form-group {
-    margin-bottom: 15px;
 }
 
 .form-control {
@@ -312,6 +311,24 @@
     border-color: #adadad;
 }
 
+.footer-h1 {
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+
+.footer-p {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
 .pad-left-20 {
     padding-left: 20px;
 }
@@ -337,6 +354,10 @@
 
 .text-grey {
     color: #666666;
+}
+
+.text-light-grey {
+    color: #999999;
 }
 
 .btn-green {
